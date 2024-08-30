@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Rubik";
+  font-weight: 300 800;
+  font-display: swap;
+  src: local("Rubik"), 
+       url('Rubik-VariableFont_wght.ttf') format('trueType supports variations'),
+       url('Rubik-VariableFont_wght.ttf') format('trueType-variations');
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400 800;
+  font-stretch: 100% 200%;
+  font-display: swap;
+  src: local("Open Sans"), 
+       url('OpenSans-VariableFont_wght.ttf') format('trueType supports variations'),
+       url('OpenSans-VariableFont_wght.ttf') format('trueType-variations');
+}
