@@ -3,11 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Soap N' Sudz - Coin Laundry</title>
+    <title>Home Page | Soap N' Sudz - Coin Laundry</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./images/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./images/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./images/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./images/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./images/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./images/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./images/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./images/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
   </head>
   <body class="page">
     <!-- Header Section -->
@@ -17,9 +34,9 @@
       </div>
       <nav class="menu">
         <ul class="menu__list">
-          <li><a class="menu__list-item-link" href="#home">Home</a></li>
+          <li><a class="menu__list-item-link active" href="#home">Home</a></li>
           <li>
-            <a class="menu__list-item-link" target="_blank" href="self-service.html">Self Service Laundry</a>
+            <a class="menu__list-item-link" href="self-service.html">Self Service Laundry</a>
           </li>
           <li>
             <a class="menu__list-item-link" href="#drop-off"
@@ -29,6 +46,20 @@
           <li><a class="menu__list-item-link" href="#about">About Us</a></li>
           <li><a class="menu__list-item-link" href="#contact">Contact</a></li>
         </ul>
+        <button class="header__menu-toggle-btn">
+          <div class="header__menu-toggle" aria-label="Toggle Menu"></div>
+        </button>
+        <div class="header__menu-toggle-position">
+          <div class="header__menu-toggle-content">
+              <ul class="header__menu-toggle-items">
+                  <li><a class="header__menu-item_link" href="">Home</a></li>
+                  <li><a class="header__menu-item_link" href="">Self Service Laundry</a></li>
+                  <li><a class="header__menu-item_link" href="">Drop Off Service</a></li>
+                  <li><a class="header__menu-item_link" href="">About Us</a></li>
+                  <li><a class="header__menu-item_link" href="">Contact</a></li>
+              </ul>
+          </div>
+      </div>
       </nav>
       <div class="contact-info">
         <div class="phone-hours">
@@ -56,15 +87,16 @@
       <div class="intro-decor-right"></div>
       <h1 class="main-title">Soap N’Sudz</h1>
       <p class="sub-title">Coin Laundry</p>
-      <a class="more-info">
+      <a class="more-info" href="index.html#services">
         <p class="more-info-text">Read More</p>
         <img class="more-info-icon" src="./images/more-info-arrow.svg" alt="" />
       </a>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
-      <div id="self-service" class="service">
+    <section class="section-background background-color-light section-margin-top">
+      <div id="services" class="services">
+        <div id="self-service" class="service">
           <h3 class="service__title section-title">Self Service Laundry</h3>
           <p class="service__description">We have Speed Queen washers and dryers for your convenience!</p>
           <a class="service__link" href="#header">
@@ -73,7 +105,9 @@
             </button> 
           </a>
         </div>
-        <img class="services-types-image" src="./images/washing-machine.png">
+        <div class="service__image-contener">
+            <img class="services-types-image" src="./images/washing-machine.png">
+        </div>
         <div id="drop-off" class="service">
           <h3 class="service__title section-title">Drop Off Service</h3>
           <p class="service__description">
@@ -85,9 +119,10 @@
             </button> 
           </a>  
         </div>
+      </div>
     </section>
-
-    <section id="about" class="about">
+    <section class="section-background background-color-light">
+      <div id="about" class="about">
         <h2 class="about__title">About Us</h2>
         <ul class="about__cards-list">
           <li class="about__card-item">
@@ -118,43 +153,46 @@
             </p>
           </li>
         </ul>
-    </section>
-  
-    <section id="why" class="why">
-      <div class="why__image"></div>
-      <!-- <img class="why__image" alt="" src="./images/why-image.png"> -->
-      <div class="why__content">
-        <div class="why__choose">
-          <h3 class="why__choose-title section-title">Why choose us</h3>
-          <p class="why__choose-description">Welcome to Soap N Sudz, your ultimate destination for hassle-free laundry solutions. Our coin-operated laundromat offers the perfect blend of convenience and efficiency, designed to make your laundry day a breeze.</p>
-        </div>
-        <ul class="why__services-list">
-            <li class="why__services-list-item">
-              <p class="why__services-description">Our laundromat offers Self Service Laundry 
-              <span class="why__services-description-span">Step into our modern and spacious facility, equipped with a wide selection of high-quality Speed Queen washers and dryers.</span></p>
-            </li>
-            <li class="why__services-list-item">
-              <p class="why__services-description">Drop Off Service 
-                <span class="why__services-description-span">Pressed for time? Take advantage of our premium Drop-Off Service! Simply leave your laundry with our friendly and professional attendants, and we’ll take care of the rest. </span></p>
-            </li>
-          </ul>       
       </div>
+    </section>  
+    <section class="section-background background-color-blue">
+      <div id="why" class="why">
+        <div class="why__image"></div>      
+        <div class="why__content">
+          <div class="why__choose">
+            <h3 class="why__choose-title section-title">Why choose us</h3>
+            <p class="why__choose-description">Welcome to Soap N Sudz, your ultimate destination for hassle-free laundry solutions. Our coin-operated laundromat offers the perfect blend of convenience and efficiency, designed to make your laundry day a breeze.</p>
+          </div>
+          <ul class="why__services-list">
+              <li class="why__services-list-item">
+                <p class="why__services-description">Our laundromat offers Self Service Laundry 
+                <span class="why__services-description-span">Step into our modern and spacious facility, equipped with a wide selection of high-quality Speed Queen washers and dryers.</span></p>
+              </li>
+              <li class="why__services-list-item">
+                <p class="why__services-description">Drop Off Service 
+                  <span class="why__services-description-span">Pressed for time? Take advantage of our premium Drop-Off Service! Simply leave your laundry with our friendly and professional attendants, and we’ll take care of the rest. </span></p>
+              </li>
+            </ul>       
+        </div>
+      </div>  
     </section>
     <!-- Promotions Section -->
-    <section id="promotions" class="promotions">
-      <h2 class="promotions__title">promotions</h2>
-      <div class="promotions__content">
-        <div class="promotions__content-info">
-          <h3 class="section-title">Midweek Wash Day Special</h3>
-          <p class="promotions__content-description">Get over the Hump with <snap class="promotions__content-description-snap">1 FREE</snap> Tide Pods per customer!  
-          </p>
+    <section class="section-background background-color-light">
+      <div id="promotions" class="promotions">
+        <h2 class="promotions__title">promotions</h2>
+        <div class="promotions__content">
+          <div class="promotions__content-info">
+            <h3 class="section-title">Midweek Wash Day Special</h3>
+            <p class="promotions__content-description">Get over the Hump with <snap class="promotions__content-description-snap">1 FREE</snap> Tide Pods per customer!  
+            </p>
+          </div>
+          <img class="promotions__content-image" src="./images/promotions.png">
         </div>
-        <img class="promotions__content-image" src="./images/promotions.png">
-      </div>
-      <div class="promotions__more-info">
-        <p>Don't miss out on these amazing deals</p> 
-        <p>at Soap N Sudz – Coin Laundry.</p>
-        <p>Visit us today and take advantage of our special offers!</p>
+        <div class="promotions__more-info">
+          <p>Don't miss out on these amazing deals</p> 
+          <p>at Soap N Sudz – Coin Laundry.</p>
+          <p>Visit us today and take advantage of our special offers!</p>
+        </div>
       </div>
     </section>
 
@@ -212,7 +250,6 @@
         <button class="button review-button">Review us on Google<img class="review-button-icon" src="./images/open.svg"> </button>
       </div>
     </section>
-
     <footer class="footer">
       <div class="footer-top">
           <div class="footer-address-section">
@@ -249,18 +286,18 @@
           <h4 class="footer-sub-title">Links</h4>
           <div class="footer-links-list">
             <ul class="list-column">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Prices</a></li>
+                <li class="list-column-item"><a href="#">Home</a></li>
+                <li class="list-column-item"><a href="#">Services</a></li>
+                <li class="list-column-item"><a href="#">Prices</a></li>
             </ul>
             <ul class="list-column">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="list-column-item"><a href="#">About</a></li>
+                <li class="list-column-item"><a href="#">Contact</a></li>
             </ul>
             <ul class="list-column">
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Support</a></li>
+                <li class="list-column-item"><a href="#">Privacy Policy</a></li>
+                <li class="list-column-item"><a href="#">Terms of Use</a></li>
+                <li class="list-column-item"><a href="#">Support</a></li>
             </ul>
           </div>
         </div>
@@ -283,8 +320,6 @@
           <p>© 2024 Soap N Sudz – Coin Laundry</p>
     </div>
   </footer>
-
-    <!-- Add your JavaScript if needed -->
-    <script src="scripts.js"></script>
+    <script type="text/javascript" async="async" src="./scripts/index.js"></script>  
   </body>
 </html>
